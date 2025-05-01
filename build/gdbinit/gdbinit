@@ -1,0 +1,2 @@
+source E:/codeproject/esp32-wifi-killer/build/gdbinit/symbols
+source E:/codeproject/esp32-wifi-killer/build/gdbinit/connect
