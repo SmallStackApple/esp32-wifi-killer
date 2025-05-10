@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "esp32-wifi-killer",
-    "project_version":    "293873b-dirty",
+    "project_version":    "e6ae793-dirty",
     "project_path":       "E:/codeproject/esp32-wifi-killer",
     "idf_path":           "E:/idf/Espressif/frameworks/esp-idf-v5.4.1",
     "build_dir":          "E:/codeproject/esp32-wifi-killer/build",
