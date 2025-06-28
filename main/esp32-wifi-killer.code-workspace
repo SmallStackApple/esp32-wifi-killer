@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"name": "esp-lowcode-matter",
+			"path": "C:/Users/MYQ/esp/esp-lowcode-matter"
+		},
+		{
+			"name": "esp-amp",
+			"path": "C:/Users/MYQ/esp/esp-amp"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"freertos.h": "c",
+			"task.h": "c",
+			"esp_wifi.h": "c",
+			"complex": "c",
+			"format": "c",
+			"esp_random.h": "c"
+		}
+	}
+}

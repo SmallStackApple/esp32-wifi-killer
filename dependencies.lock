@@ -1,0 +1,21 @@
+dependencies:
+  espressif/ssd1306:
+    component_hash: 102cfc05b1b304862fa3f494e9dd955844bcc5f6cb16596e4ca5df3e6bf9fd0d
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=4.0'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.0.5~1
+  idf:
+    source:
+      type: idf
+    version: 5.4.1
+direct_dependencies:
+- espressif/ssd1306
+- idf
+manifest_hash: d89e14bed18d741e1af0bd6fc5d023b0bc15a6dbac92ef058c963b41e9b21f66
+target: esp32
+version: 2.0.0
