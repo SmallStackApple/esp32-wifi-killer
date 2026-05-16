@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: espressif/idf:v6.0
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build firmware
+        run: |
+          . /opt/esp/idf/export.sh
+          idf.py build
+          idf.py size
+
+  check:
+    runs-on: ubuntu-latest
+    container:
+      image: espressif/idf:v6.0
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install cppcheck
+        run: |
+          apt-get update -qq
+          apt-get install -y -qq cppcheck
+
+      - name: Check code with cppcheck
+        run: |
+          cppcheck --enable=warning,style,performance,portability \
+                   --suppress=missingInclude \
+                   --error-exitcode=1 \
+                   main/
