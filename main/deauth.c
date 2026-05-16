@@ -30,7 +30,7 @@ void wsl_bypasser_send_raw_frame(const uint8_t *frame_buffer, int size){
 }
 
 void wifi_deauth_task(void *pvParameters) {
-    wifi_ap_record_t *ap_record = pvParameters;
+    const wifi_ap_record_t *ap_record = pvParameters;
 
     uint8_t deauth_frame[sizeof(deauth_frame_template)];
     memcpy(deauth_frame, deauth_frame_template, sizeof(deauth_frame_template));
@@ -50,7 +50,7 @@ void wifi_deauth_task(void *pvParameters) {
     }
 }
 
-void start_deauth_task(wifi_ap_record_t *ap_info) {
+void start_deauth_task(const wifi_ap_record_t *ap_info) {
     if (deauth_task_handle != NULL) {
         ESP_LOGW(TAG, "Deauth task already running");
         return;

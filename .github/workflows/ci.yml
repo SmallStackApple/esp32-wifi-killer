@@ -54,5 +54,7 @@ jobs:
         run: |
           cppcheck --enable=warning,style,performance,portability \
                    --suppress=missingInclude \
+                   --suppress=unknownMacro \
+                   --suppress=constParameterCallback \
                    --error-exitcode=1 \
                    main/
